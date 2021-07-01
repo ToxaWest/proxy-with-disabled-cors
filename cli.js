@@ -12,18 +12,14 @@ if (!target) {
 }
 
 const express = require('express');
-const {createProxyMiddleware} = require('http-proxy-middleware');
+const cors = require('cors');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
-
+app.use(cors())
 app.use('/', createProxyMiddleware({
     target,
-    changeOrigin: true,
-    onProxyRes: function (proxyRes, req, res) {
-        proxyRes.headers['Access-Control-Allow-Origin'] = '*';
-        proxyRes.headers["Access-Control-Allow-Methods"] = "DELETE, POST, GET, OPTIONS, PUT";
-        proxyRes.headers["Access-Control-Allow-Headers"] = "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With";
-    }
+    changeOrigin: true
 }));
 app.listen(port);
-console.log('Your new URL is http://localhost:'+ port)
+console.log('Your new URL is http://localhost:' + port);

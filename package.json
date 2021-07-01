@@ -1,6 +1,6 @@
 {
   "name": "proxy-with-disabled-cors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple proxy using for disable cors policy",
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "cors": "^2.8.5",
     "http-proxy-middleware": "^2.0.0"
   },
   "bin": "./cli.js"
