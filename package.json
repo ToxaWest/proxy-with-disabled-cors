@@ -1,6 +1,6 @@
 {
   "name": "proxy-with-disabled-cors",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple proxy using for disable cors policy",
   "repository": {
     "type": "git",

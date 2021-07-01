@@ -15,7 +15,7 @@
 - second argument is port (default - 3080)
 ####
     proxy-with-disabled-cors https://google.com
-####or
+#### or
     proxy-with-disabled-cors https://google.com 3080
 
 ### Now you can use proxy http://localhost:3080
