@@ -1,6 +1,17 @@
 {
   "name": "proxy-with-disabled-cors",
   "version": "1.0.2",
+  "description": "Simple proxy using for disable cors policy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ToxaWest/proxy-with-disabled-cors.git"
+  },
+  "keywords": [
+    "CORS",
+    "proxy"
+  ],
+  "author": "ToxaWest",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "http-proxy-middleware": "^2.0.0"

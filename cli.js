@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 
-const [,,target] = process.argv;
-var pat = /^https?:\/\//i;
-if(!target) {
+const [, , target, port = 3080] = process.argv;
+const pat = /^https?:\/\//i;
+
+if (!target) {
     console.log('Api url is required');
     return;
-} else if(!pat.test(target)){
+} else if (!pat.test(target)) {
     console.log('Url not valid');
     return;
 }
+
 const express = require('express');
 const {createProxyMiddleware} = require('http-proxy-middleware');
 
@@ -23,4 +25,5 @@ app.use('/', createProxyMiddleware({
         proxyRes.headers["Access-Control-Allow-Headers"] = "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With";
     }
 }));
-app.listen(3080);
+app.listen(port);
+console.log('Your new URL is http://localhost:'+ port)
