@@ -3,7 +3,7 @@ const {createProxyMiddleware} = require('http-proxy-middleware');
 
 const app = express();
 
-const target = process.env.npm_config_API;
+const target = process.env.API;
 
 app.use('/', createProxyMiddleware({
     target,
