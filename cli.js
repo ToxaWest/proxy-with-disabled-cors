@@ -1,9 +1,18 @@
+#!/usr/bin/env node
+
+const [,,target] = process.argv;
+var pat = /^https?:\/\//i;
+if(!target) {
+    console.log('Api url is required');
+    return;
+} else if(!pat.test(target)){
+    console.log('Url not valid');
+    return;
+}
 const express = require('express');
 const {createProxyMiddleware} = require('http-proxy-middleware');
 
 const app = express();
-
-const target = process.env.API;
 
 app.use('/', createProxyMiddleware({
     target,

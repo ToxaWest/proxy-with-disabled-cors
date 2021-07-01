@@ -1,13 +1,9 @@
 {
   "name": "proxy-with-disabled-cors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "express": "^4.17.1",
     "http-proxy-middleware": "^2.0.0"
   },
-  "scripts": {
-    "start:proxy": "node server.js"
-  },
-  "main": "./server.js",
-  "bin": "./server.js"
+  "bin": "./cli.js"
 }
