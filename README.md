@@ -11,11 +11,12 @@
     npm i -g proxy-with-disabled-cors
 
 #### 2) paste arguments
-- first argument is url
-- second argument is port (default - 3080)
+- -h url
+- -p port (default - 3080)
+- -o origin (default - http://localhost:3000)
 ####
-    proxy-with-disabled-cors https://google.com
+    proxy-with-disabled-cors -h https://google.com
 #### or
-    proxy-with-disabled-cors https://google.com 3080
+    proxy-with-disabled-cors -h https://google.com -p 3080 -o http://localhost:3000
 
 ### Now you can use proxy http://localhost:3080
